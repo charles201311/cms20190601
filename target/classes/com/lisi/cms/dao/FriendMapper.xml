@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lisi.cms.dao.FriendMapper" >
+  
+ <select id="list" resultType="map">
+ 
+  select * from cms_friend 
+  <where>
+   <if test="null!=name and name!=''">
+   
+    text like "%" #{name} "%"
+   
+   </if>
+  
+  </where>
+ 
+ 
+ </select>
+ 
+ <update id="update">
+ update cms_friend set text=#{text},url=#{url},created=now() where id =#{id}
+ 
+ </update>
+ 
+ <insert id="insert">
+ insert into cms_friend(text,url,created) values(#{text},#{url},now())
+ 
+ </insert>
+ 
+ <select id="get" resultType="friend">
+ 
+  select * from cms_friend  where id =#{id}
+ 
+ 
+ </select>
+ 
+ <delete id="deleteById" >
+ 
+ delete from cms_friend where id =#{id}
+ </delete>
+ 
+  
+</mapper>

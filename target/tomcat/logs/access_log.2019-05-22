@@ -1,0 +1,5 @@
+127.0.0.1 - - [22/May/2019:13:50:16 +0800] "GET /admin HTTP/1.1" 200 8416 http-bio-80-exec-1 1080
+127.0.0.1 - - [22/May/2019:13:50:16 +0800] "GET /resource/js/jquery-3.2.1.js HTTP/1.1" 304 - http-bio-80-exec-3 13
+127.0.0.1 - - [22/May/2019:13:50:20 +0800] "GET /getUserList HTTP/1.1" 200 4343 http-bio-80-exec-4 924
+0:0:0:0:0:0:0:1 - - [22/May/2019:14:00:12 +0800] "GET /pic/1.jpg HTTP/1.1" 200 51751 http-bio-80-exec-6 8
+0:0:0:0:0:0:0:1 - - [22/May/2019:14:00:12 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-80-exec-8 10
